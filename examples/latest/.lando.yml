@@ -1,0 +1,18 @@
+name: phpcacheadmin-latest-example
+recipe: lamp
+config:
+  webroot: .
+services:
+  redis:
+    type: redis
+  memcached:
+    type: memcached
+  phpcacheadmin:
+    type: phpcacheadmin:latest
+    hosts:
+      - type: redis
+        name: Redis
+        host: redis
+      - type: memcached
+        name: Memcached
+        host: memcached

@@ -1,0 +1,27 @@
+{
+  "name": "@cdubz/lando-phpcacheadmin",
+  "description": "A Lando plugin that provides a tight integration with phpCacheAdmin.",
+  "version": "0.0.1",
+  "author": "Christopher C. Wells",
+  "license": "GPL-3.0-or-later",
+  "repository": "cdubz/lando-phpcacheadmin",
+  "bugs": "https://github.com/cdubz/lando-phpcacheadmin/issues/new/choose",
+  "homepage": "https://github.com/cdubz/lando-phpcacheadmin",
+  "keywords": [
+    "lando",
+    "lando-plugin",
+    "phpcacheadmin"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --quiet ."
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.18.9",
+    "eslint": "^8.21.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}

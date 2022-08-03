@@ -20,7 +20,7 @@ module.exports = {
       config: '/etc/phpcacheadmin/config.php',
     },
   },
-  parent: '_lando',
+  parent: '_service',
   builder: (parent, config) => class LandoPca extends parent {
     constructor(id, options = {}) {
       options = _.merge({}, config, options);

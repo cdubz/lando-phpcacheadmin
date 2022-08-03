@@ -23,4 +23,5 @@ jobs:
           exclusions: '*.git* /*examples/* .editorconfig .eslintrc.json .nvmrc'
       - uses: actions/upload-artifact@v3
         with:
+          name: 'lando-phpcacheadmin-plugin'
           path: 'phpcacheadmin.zip'

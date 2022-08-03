@@ -31,11 +31,15 @@ jobs:
             echo ::set-output name=is_tag::false
           fi
         shell: bash
+      - run: |
+          mkdir phpcacheadmin
+          cp node_modules services index.js LICENSE.txt package.json package-lock.json README.md phpcacheadmin
+        shell: bash
       - uses: thedoctor0/zip-release@main
         with:
           type: 'zip'
+          path: 'phpcacheadmin'
           filename: ${{ steps.vars.outputs.filename }}
-          exclusions: '*.git* /*examples/* .editorconfig .eslintrc.json .nvmrc'
       - uses: actions/upload-artifact@v3
         with:
           name: ${{ steps.vars.outputs.filename }}

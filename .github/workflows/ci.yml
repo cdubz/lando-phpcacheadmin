@@ -27,7 +27,7 @@ jobs:
             echo ::set-output name=filename::"phpcacheadmin-$(eval printf "%s" "$TAG").zip"
             echo ::set-output name=is_tag::true
           else
-            echo ::set-output name=filename::"phpcacheadmin-$(eval printf "%s" "${{ github.sha }}").zip"}
+            echo ::set-output name=filename::"phpcacheadmin-$(eval printf "%s" "${{ github.sha }}").zip"
             echo ::set-output name=is_tag::false
           fi
         shell: bash
@@ -38,7 +38,7 @@ jobs:
           exclusions: '*.git* /*examples/* .editorconfig .eslintrc.json .nvmrc'
       - uses: actions/upload-artifact@v3
         with:
-          name: 'lando-phpcacheadmin-plugin'
+          name: ${{ steps.vars.outputs.filename }}
           path: ${{ steps.vars.outputs.filename }}
       - uses: softprops/action-gh-release@v1
         if: steps.vars.outputs.is_tag == 'true'

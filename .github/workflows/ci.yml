@@ -1,0 +1,26 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+          node-version-file: '.nvmrc'
+      - run: npm install --omit=dev
+      - uses: thedoctor0/zip-release@main
+        with:
+          type: 'zip'
+          filename: 'phpcacheadmin.zip'
+          exclusions: '*.git* /*examples/* .editorconfig .eslintrc.json .nvmrc'
+      - uses: actions/upload-artifact@v3
+        with:
+          path: 'phpcacheadmin.zip'

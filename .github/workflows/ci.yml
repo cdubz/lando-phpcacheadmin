@@ -16,11 +16,14 @@ jobs:
           cache: 'npm'
           node-version-file: '.nvmrc'
       - run: npm install --omit=dev
-      - uses: thedoctor0/zip-release@main
-        with:
-          type: 'zip'
-          filename: 'phpcacheadmin.zip'
-          exclusions: '*.git* /*examples/* .editorconfig .eslintrc.json .nvmrc'
       - uses: actions/upload-artifact@v3
         with:
-          path: 'phpcacheadmin.zip'
+          name: 'phpcacheadmin'
+          path: |
+            node_modules
+            services
+            index.js
+            LICENSE.txt
+            package.json
+            package-lock.json
+            README.md

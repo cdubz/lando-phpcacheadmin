@@ -24,10 +24,10 @@ jobs:
           if [[ "${{ github.ref }}" == "refs/tags/"* ]]; then
             REF=$(printf "%q" "${{ github.ref }}")
             TAG=${REF/refs\/tags\//}
-            echo ::set-output name=filename::"phpcacheadmin-$(eval printf "%s" "$TAG").zip"
+            echo ::set-output name=filename::"phpcacheadmin-$(eval printf "%s" "$TAG")"
             echo ::set-output name=is_tag::true
           else
-            echo ::set-output name=filename::"phpcacheadmin-$(eval printf "%s" "${{ github.sha }}").zip"
+            echo ::set-output name=filename::"phpcacheadmin-$(eval printf "%s" "${{ github.sha }}")"
             echo ::set-output name=is_tag::false
           fi
         shell: bash
@@ -39,14 +39,14 @@ jobs:
         with:
           type: 'zip'
           path: 'phpcacheadmin'
-          filename: ${{ steps.vars.outputs.filename }}
+          filename: ${{ steps.vars.outputs.filename }}.zip
       - uses: actions/upload-artifact@v3
         with:
           name: ${{ steps.vars.outputs.filename }}
-          path: ${{ steps.vars.outputs.filename }}
+          path: ${{ steps.vars.outputs.filename }}.zip
       - uses: softprops/action-gh-release@v1
         if: steps.vars.outputs.is_tag == 'true'
         with:
           draft: true
-          files: ${{ steps.vars.outputs.filename }}
+          files: ${{ steps.vars.outputs.filename }}.zip
           generate_release_notes: true

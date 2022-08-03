@@ -1,7 +1,6 @@
 # phpCacheAdmin Plugin for Lando
 
-This plugin for [Lando.dev](https://lando.dev) gives you the ability to use
-[phpCacheAdmin](https://github.com/RobiNN1/phpCacheAdmin) as a service.
+This plugin for [Lando.dev](https://lando.dev) gives you the ability to use [phpCacheAdmin](https://github.com/RobiNN1/phpCacheAdmin) as a service.
 
 phpCacheAdmin is a web dashboard for your favorite caching system.
 
@@ -11,12 +10,8 @@ phpCacheAdmin is a web dashboard for your favorite caching system.
 
 ## Installation
 
-- [Download and extract the archive of the latest version](https://github.com/cdubz/lando-phpcacheadmin/releases);
-- Move the extracted `phpcacheadmin` folder to the Lando plugins folder:
-
-```bash
-mv phpcacheadmin ~/.lando/phpcacheadmin/
-```
+- [Download the latest version of the plugin](https://github.com/cdubz/lando-phpcacheadmin/releases/latest) (`phpcacheadmin-vX.Y.Z.zip`)
+- Extract the `phpcacheadmin` folder to the Lando plugins folder (`~/.lando/plugins`)
 
 > If the `plugins` directory doesn't exist, create it:
 > ```bash

@@ -23,7 +23,7 @@ phpCacheAdmin is a web dashboard for your favorite caching system.
 You may configure phpCacheAdmin within your Landofile, by setting a service alongside your cache services.
 
 ```yaml
-name: phpcacheadmin-latest-example
+name: phpcacheadmin-1.x-example
 recipe: lamp
 config:
   webroot: .
@@ -33,7 +33,7 @@ services:
   cache2:
     type: memcached
   phpcacheadmin:
-    type: phpcacheadmin:latest
+    type: phpcacheadmin:1
     hosts:
       - type: redis
         host: cache1

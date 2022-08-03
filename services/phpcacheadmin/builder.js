@@ -7,10 +7,11 @@ const _ = require('lodash');
 module.exports = {
   name: 'phpcacheadmin',
   config: {
-    version: 'latest',
-    supported: ['latest'],
+    version: '1',
+    supported: ['1', 'latest'],
     legacy: [],
     pinPairs: {
+      '1': 'robinn/phpcacheadmin:1.1.0',
       'latest': 'robinn/phpcacheadmin:latest',
     },
     command: '/bin/sh -c apache2-foreground',

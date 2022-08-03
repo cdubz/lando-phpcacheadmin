@@ -27,7 +27,7 @@ jobs:
             echo ::set-output name=version::$(echo ${TAG})
             echo ::set-output name=is_tag::true
           else
-            echo ::set-output name=version:$(echo ${GITHUB_SHA})
+            echo ::set-output name=version::$(echo ${GITHUB_SHA})
             echo ::set-output name=is_tag::false
           fi
         shell: bash

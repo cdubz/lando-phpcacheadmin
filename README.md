@@ -20,7 +20,7 @@ mv phpcacheadmin ~/.lando/phpcacheadmin/
 
 > If the `plugins` directory doesn't exist, create it:
 > ```bash
-mkdir -p ~/.lando/plugins
+> mkdir -p ~/.lando/plugins
 > ```
 
 ## Configuration

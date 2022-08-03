@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src=".github/images/banner.svg" width="640" alt="Banner"></p>
+<img src=".github/images/banner.svg" alt="Banner"></p>
+
+</div>
 
 # phpCacheAdmin Plugin for Lando
 
 A [Lando.dev](https://lando.dev) service plugin for [phpCacheAdmin](https://github.com/RobiNN1/phpCacheAdmin)
-
-</div>
 
 ## Requirements
 

@@ -1,8 +1,12 @@
+<div align="center">
+
+<img src=".github/images/banner.svg" width="640" alt="Banner"></p>
+
 # phpCacheAdmin Plugin for Lando
 
-This plugin for [Lando.dev](https://lando.dev) gives you the ability to use [phpCacheAdmin](https://github.com/RobiNN1/phpCacheAdmin) as a service.
+A [Lando.dev](https://lando.dev) service plugin for [phpCacheAdmin](https://github.com/RobiNN1/phpCacheAdmin)
 
-phpCacheAdmin is a web dashboard for your favorite caching system.
+</div>
 
 ## Requirements
 

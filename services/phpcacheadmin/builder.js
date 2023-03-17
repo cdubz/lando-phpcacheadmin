@@ -11,7 +11,7 @@ module.exports = {
     supported: ['1', 'latest'],
     legacy: [],
     pinPairs: {
-      '1': 'robinn/phpcacheadmin:1.1.0',
+      '1': 'robinn/phpcacheadmin:1.5.0',
       'latest': 'robinn/phpcacheadmin:latest',
     },
     command: '/bin/sh -c apache2-foreground',
